@@ -3,6 +3,10 @@ unset PATH
 for p in $buildInputs; do
   export PATH=$p/bin${PATH:+:}$PATH
 done
+for p in $baseInputs; do
+  export PATH=$p/bin${PATH:+:}$PATH
+done
+
 
 tar -xf $src
 
